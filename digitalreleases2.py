@@ -793,7 +793,7 @@ def parseRutorElement(dict):
 	if not match:
 		return None
 		
-	year = match[1]
+	year = match.group(1)
 	targetYear = (datetime.date.today() - datetime.timedelta(days=365)).year
 	if int(year) < targetYear:
 		return None
